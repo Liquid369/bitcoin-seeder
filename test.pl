@@ -17,7 +17,7 @@ sub go {
   
   my $sock = IO::Socket::INET->new(
     Proto    => 'udp',
-    PeerPort => 6740,
+    PeerPort => 53,
     PeerAddr => "vps.dogec.io",
   ) or die "Could not create socket: $!\n";
 

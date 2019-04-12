@@ -406,10 +406,10 @@ static const string mainnet_seeds[] = {"seed.dogec.io", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
+ /* if (!fTestNet){
     db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8333), true);
   }
-  do {
+  do {*/
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
       LookupHost(seeds[i].c_str(), ips);

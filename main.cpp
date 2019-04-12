@@ -398,17 +398,13 @@ extern "C" void* ThreadStats(void*) {
 }
 
 static const string mainnet_seeds[] = {"seed.dogec.io", ""};
-/*static const string testnet_seeds[] = {"testnet-seed.alexykot.me",
-                                       "testnet-seed.bitcoin.petertodd.org",
-                                       "testnet-seed.bluematt.me",
-                                       "testnet-seed.bitcoin.schildbach.de",
-                                       ""};*/
+static const string testnet_seeds[] = {"seed.dogec.io", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
- /* if (!fTestNet){
+  if (!fTestNet){
     db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8333), true);
-  }*/
+  }
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;

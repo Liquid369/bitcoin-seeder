@@ -12,8 +12,8 @@
 
 #define MIN_RETRY 1000
 
-#define REQUIRE_VERSION 72109
-#define MINIMUM_VERSION_TO_AVOID_BAN_TIME 72109
+#define REQUIRE_VERSION 5000000
+#define MINIMUM_VERSION_TO_AVOID_BAN_TIME 5000000
 
 static inline int GetRequireHeight(const bool testnet = fTestNet)
 {
